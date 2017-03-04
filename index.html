@@ -2,95 +2,132 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#33474d">
-	<title>Trust the Process</title>
-	<link rel="stylesheet" href="/css/style.css" />
-	
-      <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#33474d">
+  <title>Trust the Process</title>
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
+
 </head>
 
 <body>
 
-	<header class="header">
-		<nav class="header__nav">
-			
-				<a href="/archives" class="header__link">Archive</a>
-			
-		</nav>
-		<h1 class="header__title"><a href="/">Trust the Process</a></h1>
-		<h2 class="header__subtitle"></h2>
-	</header>
+  <header class="header">
+    <nav class="header__nav">
 
-	<main>
-		
+      <a href="/archives" class="header__link">Archive</a>
 
+      <a href="/tags" class="header__link">Tags</a>
 
+    </nav>
+    <h1 class="header__title">
+      <a href="/">Trust the Process</a>
+    </h1>
+    <h2 class="header__subtitle"></h2>
+  </header>
 
-	<article>
-	
-		<h1><a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2017-03-03</span><br />
-		
-		
-	</div>
+  <main>
+    <article>
 
-	
+      <h1>
+        <a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a>
+      </h1>
 
-	
-		<h3 id="获取文件扩展名的3种方法"><a href="#获取文件扩展名的3种方法" class="headerlink" title="获取文件扩展名的3种方法"></a>获取文件扩展名的3种方法</h3><hr>
-<h4 id="方法1：正则表达式"><a href="#方法1：正则表达式" class="headerlink" title="方法1：正则表达式"></a>方法1：正则表达式</h4><p><code>function getFileExtension1(filename) {</code><br>  <code>return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] :undefined;</code><br><code>}</code></p>
-<hr>
-<h4 id="方法2：split函数"><a href="#方法2：split函数" class="headerlink" title="方法2：split函数"></a>方法2：split函数</h4><p><code>function getFileExtension2(filename) {</code><br>  <code>return filename.split(&#39;.&#39;).pop();</code><br><code>}</code></p>
-<hr>
-<h4 id="方法3：slice函数"><a href="#方法3：slice函数" class="headerlink" title="方法3：slice函数"></a>方法3：slice函数</h4><p><code>function getFileExtension3(filename) {</code><br>  <code>return filename.slice((filename.lastIndexOf(&quot;.&quot;) - 1 &gt;&gt;&gt; 0) + 2);</code><br><code>}</code></p>
-<p><code>console.log(getFileExtension3(&#39;&#39;));                            // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename&#39;));                    // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename.txt&#39;));                // &#39;txt&#39;</code><br><code>console.log(getFileExtension3(&#39;.hiddenfile&#39;));                 // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename.with.many.dots.ext&#39;)); // &#39;ext&#39;</code><br>lastIndexOf(“.”)会返回最后一个.的索引值，如果文件名不含.则返回-1;<br>&gt;&gt;&gt;是无符号位移运算符，对于”txt”、”.text”之类的lastIndexOf(“.”)返回-1和0，&gt;&gt;&gt;会将-2转换成二进制11111110，向右移两位</p>
+      <div class="article__infos">
+        <span class="article__date">2017.03.03</span>
+        <br />
 
-	
+        <span class="article__tags">
+          <a class="article__tag-link" href="/tags/javascript/">javascript</a>
+        </span>
 
-	
+      </div>
 
-</article>
+      <h3 id="获取文件扩展名的3种方法">
+        <a href="#获取文件扩展名的3种方法" class="headerlink" title="获取文件扩展名的3种方法"></a>获取文件扩展名的3种方法</h3>
+      <hr>
+      <h4 id="方法1：正则表达式">
+        <a href="#方法1：正则表达式" class="headerlink" title="方法1：正则表达式"></a>方法1：正则表达式</h4>
+      <figure class="highlight js">
+        <table>
+          <tr>
+            <td class="gutter">
+              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
+            </td>
+            <td class="code">
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension1</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="regexp">/[.]/</span>.exec(filename)) ? <span class="regexp">/[^.]+$/</span>.exec(filename)[<span class="number">0</span>] :<span class="literal">undefined</span>;</div><div class="line">  </div><div class="line">&#125;</div></pre>
+            </td>
+          </tr>
+        </table>
+      </figure>
+      <hr>
+      <h4 id="方法2：split函数">
+        <a href="#方法2：split函数" class="headerlink" title="方法2：split函数"></a>方法2：split函数</h4>
+      <figure class="highlight js">
+        <table>
+          <tr>
+            <td class="gutter">
+              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
+            </td>
+            <td class="code">
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension2</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.split(<span class="string">'.'</span>).pop();</div><div class="line">  </div><div class="line">&#125;</div></pre>
+            </td>
+          </tr>
+        </table>
+      </figure>
+      <hr>
+      <h4 id="方法3：slice函数">
+        <a href="#方法3：slice函数" class="headerlink" title="方法3：slice函数"></a>方法3：slice函数</h4>
+      <figure class="highlight js">
+        <table>
+          <tr>
+            <td class="gutter">
+              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre>
+            </td>
+            <td class="code">
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension3</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.slice((filename.lastIndexOf(<span class="string">"."</span>) - <span class="number">1</span> &gt;&gt;&gt; <span class="number">0</span>) + <span class="number">2</span>);</div><div class="line">  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">''</span>));                            <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename'</span>));                    <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.txt'</span>));                <span class="comment">// 'txt'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'.hiddenfile'</span>));                 <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.with.many.dots.ext'</span>)); <span class="comment">// 'ext'</span></div></pre>
+            </td>
+          </tr>
+        </table>
+      </figure>
+      <p>&emsp;&emsp;lastIndexOf(“.”)会返回最后一个”.”的索引值，如果文件名不含”.”，则返回-1。&gt;&gt;&gt;是无符号右移运算符，对于”txt”、”.text”之类的lastIndexOf(“.”)返回-1和0，&gt;&gt;&gt;会将-2转换成二进制1111
+        1111 1111 1111 1111 1111 1111 1110，此时右移0位变成无符号数，表示十进制数4294967294，-1转换之后表示十进制数4294967295，slice(index)函数对index超过字符长度串的返回””。</p>
+      <p>转自
+        <a href="http://www.jstips.co/en/javascript/get-file-extension/" target="_blank"
+                                                                                        rel="external">JsTips</a>
+        <br>
+        <figure class="figure">
+          <img src="/source/img/DVA.jpg" width="500" height="500">
+        </figure>
+      </p>
 
+    </article>
 
+    <span class="different-posts">📕 end of posts 📕</span>
 
+  </main>
 
+  <footer class="footer">
+    <div class="footer-content">
 
+      <div class="footer__element">
+        <p>Are You OK ?</p>
+      </div>
 
-	<span class="different-posts">📕 end of posts 📕</span>
+      <div class="footer__element">
+        <ul class="footer-links">
+        </ul>
+      </div>
 
+      <div class="footer-credit">
+        <span>© 2017 Donham Sun | Powered by Hexo</span>
+      </div>
 
-	</main>
+    </div>
 
-	<footer class="footer">
-	<div class="footer-content">
-		
-	      <div class="footer__element">
-	<p>Are You OK ?</p>
-</div>
-
-	    
-	      <div class="footer__element">
-	<ul class="footer-links">
-	</ul>
-</div>
-
-	    
-
-		<div class="footer-credit">
-			<span>© 2017 Donham Sun | Powered by Hexo</span>
-		</div>
-
-	</div>
-
-
-</footer>
-
-
+  </footer>
 
 </body>
 

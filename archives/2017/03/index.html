@@ -2,95 +2,89 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#33474d">
-	<title>Trust the Process</title>
-	<link rel="stylesheet" href="/css/style.css" />
-	
-      <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#33474d">
+  <title>Trust the Process</title>
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
+
 </head>
 
 <body>
 
-	<header class="header">
-		<nav class="header__nav">
-			
-				<a href="/archives" class="header__link">Archive</a>
-			
-		</nav>
-		<h1 class="header__title"><a href="/">Trust the Process</a></h1>
-		<h2 class="header__subtitle"></h2>
-	</header>
+  <header class="header">
+    <nav class="header__nav">
 
-	<main>
-		<h1>Archive</h1>
+      <a href="/archives" class="header__link">Archive</a>
 
+      <a href="/tags" class="header__link">Tags</a>
 
+    </nav>
+    <h1 class="header__title">
+      <a href="/">Trust the Process</a>
+    </h1>
+    <h2 class="header__subtitle"></h2>
+  </header>
 
+  <main>
+    <h1>Archive</h1>
 
+    <ul class="archive">
 
-<ul class="archive">
-	
-	
-		<li class="archive__year archive__expendable ">
-			<span>2017</span>
-			<ul>
-				
-					<li class="archive__month archive__expendable">
-						<span>March</span>
-						<ul>
-							
-								<li class="archive__entry"><a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a></li>
-							
-						</ul>
-					</li>
+      <li class="archive__year archive__expendable ">
+        <span>2017</span>
+        <ul>
 
-				
-			</ul>
-		</li>
-		
-	
-</ul>
+          <li class="archive__month archive__expendable">
+            <span>March</span>
+            <ul>
 
-<script>
-	const expandables = document.querySelectorAll('.archive__expendable')
-	for(let i = 0; i < expandables.length; i++) {
-		expandables[i].addEventListener('click', (e) => {
-			e.stopPropagation()
-			expandables[i].classList.toggle('archive__expendable_collapsed')
-		})
-	}
-</script>
+              <li class="archive__entry">
+                <a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a>
+              </li>
 
-	</main>
+            </ul>
+          </li>
 
-	<footer class="footer">
-	<div class="footer-content">
-		
-	      <div class="footer__element">
-	<p>Are You OK ?</p>
-</div>
+        </ul>
+      </li>
 
-	    
-	      <div class="footer__element">
-	<ul class="footer-links">
-	</ul>
-</div>
+    </ul>
 
-	    
+    <script>
+      const expandables = document.querySelectorAll('.archive__expendable')
+      for (let i = 0; i < expandables.length; i++) {
+        expandables[i].addEventListener('click', (e) => {
+          e.stopPropagation()
+          expandables[i].classList.toggle('archive__expendable_collapsed')
+        })
+      }
 
-		<div class="footer-credit">
-			<span>© 2017 Donham Sun | Powered by Hexo</span>
-		</div>
+    </script>
 
-	</div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-content">
 
-</footer>
+      <div class="footer__element">
+        <p>Are You OK ?</p>
+      </div>
 
+      <div class="footer__element">
+        <ul class="footer-links">
+        </ul>
+      </div>
 
+      <div class="footer-credit">
+        <span>© 2017 Donham Sun | Powered by Hexo</span>
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 
