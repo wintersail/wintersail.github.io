@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wintersail.com/"/>
-  <updated>2017-03-04T13:56:43.408Z</updated>
+  <updated>2017-03-04T13:58:39.825Z</updated>
   <id>http://wintersail.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wintersail.com/2017/03/03/get-file-extension/"/>
     <id>http://wintersail.com/2017/03/03/get-file-extension/</id>
     <published>2017-03-03T06:53:39.000Z</published>
-    <updated>2017-03-04T13:56:43.408Z</updated>
+    <updated>2017-03-04T13:58:39.825Z</updated>
     
     <content type="html"><![CDATA[<h3 id="获取文件扩展名的3种方法">
   <a href="#获取文件扩展名的3种方法" class="headerlink" title="获取文件扩展名的3种方法"></a>获取文件扩展名的3种方法</h3>
@@ -74,7 +74,7 @@
 <p>转自
   <a href="http://www.jstips.co/en/javascript/get-file-extension/" target="_blank" rel="external">JsTips</a>
   <br>
-  <figure class="figure"><img src="/img/DVA.jpg" width="500" height="500"></figure>
+  <figure class="figure"><img src="/img/DVA.jpg"></figure>
 </p>
 ]]></content>
     
