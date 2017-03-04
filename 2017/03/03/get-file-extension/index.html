@@ -1,100 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  
-  <title>获取文件扩展名的方法 | Trust the Process</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="获取文件扩展名的3种方法
-方法1：正则表达式function getFileExtension1(filename) {  return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] :undefined;}
-
-方法2：split函数function getFileExtension2(filename) {  return filenam">
-<meta property="og:type" content="article">
-<meta property="og:title" content="获取文件扩展名的方法">
-<meta property="og:url" content="http://wintersail.com/2017/03/03/get-file-extension/index.html">
-<meta property="og:site_name" content="Trust the Process">
-<meta property="og:description" content="获取文件扩展名的3种方法
-方法1：正则表达式function getFileExtension1(filename) {  return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] :undefined;}
-
-方法2：split函数function getFileExtension2(filename) {  return filenam">
-<meta property="og:updated_time" content="2017-03-04T05:14:05.215Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取文件扩展名的方法">
-<meta name="twitter:description" content="获取文件扩展名的3种方法
-方法1：正则表达式function getFileExtension1(filename) {  return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] :undefined;}
-
-方法2：split函数function getFileExtension2(filename) {  return filenam">
-  
-    <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#33474d">
+	<title>获取文件扩展名的方法 | Trust the Process</title>
+	<link rel="stylesheet" href="/css/style.css" />
+	
+      <link rel="alternate" href="/atom.xml" title="Trust the Process" type="application/atom+xml">
+    
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Trust the Process</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://wintersail.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-get-file-extension" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/03/get-file-extension/" class="article-date">
-  <time datetime="2017-03-03T06:53:39.000Z" itemprop="datePublished">2017-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      获取文件扩展名的方法
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="获取文件扩展名的3种方法"><a href="#获取文件扩展名的3种方法" class="headerlink" title="获取文件扩展名的3种方法"></a>获取文件扩展名的3种方法</h3><hr>
+	<header class="header">
+		<nav class="header__nav">
+			
+				<a href="/archives" class="header__link">Archive</a>
+			
+		</nav>
+		<h1 class="header__title"><a href="/">Trust the Process</a></h1>
+		<h2 class="header__subtitle"></h2>
+	</header>
+
+	<main>
+		<article>
+	
+		<h1>获取文件扩展名的方法</h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2017-03-03</span><br />
+		
+		
+	</div>
+
+	
+
+	
+		<h3 id="获取文件扩展名的3种方法"><a href="#获取文件扩展名的3种方法" class="headerlink" title="获取文件扩展名的3种方法"></a>获取文件扩展名的3种方法</h3><hr>
 <h4 id="方法1：正则表达式"><a href="#方法1：正则表达式" class="headerlink" title="方法1：正则表达式"></a>方法1：正则表达式</h4><p><code>function getFileExtension1(filename) {</code><br>  <code>return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] :undefined;</code><br><code>}</code></p>
 <hr>
 <h4 id="方法2：split函数"><a href="#方法2：split函数" class="headerlink" title="方法2：split函数"></a>方法2：split函数</h4><p><code>function getFileExtension2(filename) {</code><br>  <code>return filename.split(&#39;.&#39;).pop();</code><br><code>}</code></p>
@@ -102,87 +46,43 @@
 <h4 id="方法3：slice函数"><a href="#方法3：slice函数" class="headerlink" title="方法3：slice函数"></a>方法3：slice函数</h4><p><code>function getFileExtension3(filename) {</code><br>  <code>return filename.slice((filename.lastIndexOf(&quot;.&quot;) - 1 &gt;&gt;&gt; 0) + 2);</code><br><code>}</code></p>
 <p><code>console.log(getFileExtension3(&#39;&#39;));                            // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename&#39;));                    // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename.txt&#39;));                // &#39;txt&#39;</code><br><code>console.log(getFileExtension3(&#39;.hiddenfile&#39;));                 // &#39;&#39;</code><br><code>console.log(getFileExtension3(&#39;filename.with.many.dots.ext&#39;)); // &#39;ext&#39;</code><br>lastIndexOf(“.”)会返回最后一个.的索引值，如果文件名不含.则返回-1;<br>&gt;&gt;&gt;是无符号位移运算符，对于”txt”、”.text”之类的lastIndexOf(“.”)返回-1和0，&gt;&gt;&gt;会将-2转换成二进制11111110，向右移两位</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wintersail.com/2017/03/03/get-file-extension/" data-id="cizutyto80000covk6enw287i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-  
+	
+
+	
+		<span class="different-posts"><a href="/2017/03/03/get-file-extension/" onclick="window.history.go(-1); return false;">⬅️ Go back </a></span>
+
+	
+
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+	</main>
 
-  
-    
+	<footer class="footer">
+	<div class="footer-content">
+		
+	      <div class="footer__element">
+	<p>Are You OK ?</p>
+</div>
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
-    </div>
-  </div>
+	    
+	      <div class="footer__element">
+	<ul class="footer-links">
+	</ul>
+</div>
+
+	    
+
+		<div class="footer-credit">
+			<span>© 2017 Donham Sun | Powered by Hexo</span>
+		</div>
+
+	</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 Donham Sun<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-
-<script src="/js/script.js"></script>
-
-  </div>
 </body>
+
 </html>
