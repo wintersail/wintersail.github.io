@@ -32,6 +32,40 @@
     <article>
 
       <h1>
+        <a href="/2017/03/05/only-number/">只能输入数字</a>
+      </h1>
+
+      <div class="article__infos">
+        <span class="article__date">2017.03.05</span>
+        <br />
+
+        <span class="article__tags">
+          <a class="article__tag-link" href="/tags/javascript/">javascript</a>
+        </span>
+
+      </div>
+
+      <h4 id="代码如下：">
+        <a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h4>
+      <figure class="highlight html">
+        <table>
+          <tr>
+            <td class="gutter">
+              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre>
+            </td>
+            <td class="code">
+              <pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>index<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"txt1"</span> <span class="attr">oninput</span>=<span class="string">"show(this.value)"</span>  /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">val</span>) </span>&#123;</div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">'txt1'</span>).value = val.replace(<span class="regexp">/\D/g</span>,<span class="string">''</span>);</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre>
+            </td>
+          </tr>
+        </table>
+      </figure>
+      <p>&emsp;&emsp;也试过onkeyup,onkeydown,onkeypress，第一个onkeyup会先显示再删除，后两个由于先执行了事件再添加字符，不能满足要求。</p>
+
+    </article>
+
+    <article>
+
+      <h1>
         <a href="/2017/03/03/get-file-extension/">获取文件扩展名的方法</a>
       </h1>
 
@@ -57,7 +91,7 @@
               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
             </td>
             <td class="code">
-              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension1</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="regexp">/[.]/</span>.exec(filename)) ? <span class="regexp">/[^.]+$/</span>.exec(filename)[<span class="number">0</span>] :<span class="literal">undefined</span>;</div><div class="line">  </div><div class="line">&#125;</div></pre>
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension1</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="regexp">/[.]/</span>.exec(filename)) ? <span class="regexp">/[^.]+$/</span>.exec(filename)[<span class="number">0</span>] :<span class="literal">undefined</span>;</div><div class="line"></div><div class="line">&#125;</div></pre>
             </td>
           </tr>
         </table>
@@ -72,7 +106,7 @@
               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
             </td>
             <td class="code">
-              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension2</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.split(<span class="string">'.'</span>).pop();</div><div class="line">  </div><div class="line">&#125;</div></pre>
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension2</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.split(<span class="string">'.'</span>).pop();</div><div class="line"></div><div class="line">&#125;</div></pre>
             </td>
           </tr>
         </table>
@@ -87,13 +121,13 @@
               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre>
             </td>
             <td class="code">
-              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension3</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.slice((filename.lastIndexOf(<span class="string">"."</span>) - <span class="number">1</span> &gt;&gt;&gt; <span class="number">0</span>) + <span class="number">2</span>);</div><div class="line">  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">''</span>));                            <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename'</span>));                    <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.txt'</span>));                <span class="comment">// 'txt'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'.hiddenfile'</span>));                 <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.with.many.dots.ext'</span>)); <span class="comment">// 'ext'</span></div></pre>
+              <pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFileExtension3</span>(<span class="params">filename</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> filename.slice((filename.lastIndexOf(<span class="string">"."</span>) - <span class="number">1</span> &gt;&gt;&gt; <span class="number">0</span>) + <span class="number">2</span>);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">''</span>));                            <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename'</span>));                    <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.txt'</span>));                <span class="comment">// 'txt'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'.hiddenfile'</span>));                 <span class="comment">// ''</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(getFileExtension3(<span class="string">'filename.with.many.dots.ext'</span>)); <span class="comment">// 'ext'</span></div></pre>
             </td>
           </tr>
         </table>
       </figure>
       <p>&emsp;&emsp;lastIndexOf(“.”)会返回最后一个”.”的索引值，如果文件名不含”.”，则返回-1。&gt;&gt;&gt;是无符号右移运算符，对于”txt”、”.text”之类的lastIndexOf(“.”)返回-1和0，&gt;&gt;&gt;会将-2转换成二进制1111
-        1111 1111 1111 1111 1111 1111 1110，此时右移0位变成无符号数，表示十进制数4294967294，-1转换之后表示十进制数4294967295，slice(index)函数对index超过字符长度串的返回””。</p>
+        1111 1111 1111 1111 1111 1111 1110，此时右移0位变成无符号数，表示十进制数4294967294，-1转换之后表示十进制数4294967295，slice(index)函数对index超过字符串长度的返回””。</p>
       <p>转自
         <a href="http://www.jstips.co/en/javascript/get-file-extension/" target="_blank"
                                                                                         rel="external">JsTips</a>
